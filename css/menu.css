@@ -5,4 +5,48 @@
   list-style: none;
   text-decoration: none;
 }
+
+a {
+  font-weight: 500;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  color: rgb(34, 34, 34);
+  margin: 0 10px 0 30px;
+}
+
+.nav-bar-menu {
+  display: flex;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  padding: 0 2rem;
+}
+.logo:hover {
+  scale: 1.05;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.nav-elementer {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+nav li:hover {
+  scale: 1.05;
+  transition-duration: 0.3s;
+}
+footer {
+  position: inherit;
+
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 25px;
+  color: #34313a;
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
 /* burger linjer */

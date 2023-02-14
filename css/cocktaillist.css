@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+.produkt img {
+  width: 100%;
+}
+body {
+  background-color: antiquewhite;
+}
+.drink {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  justify-content: space-between;
+  background-color: white;
+}
+.cocktail_list_main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 2rem;
+}
+.drink h2,
+p {
+  margin: 5px 0 5px 5px;
+}
+.recipeie {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 40px 0 20px 0;
+  font-weight: bold;
+}
+.strIngredient1_alc_main::before {
+  content: "Main Bozz: ";
+  font-weight: bold;
+}
+.strAlcoholic::before {
+  content: "Alcoholic drink: ";
+  font-weight: bold;
+}
+.strGlass::before {
+  content: "Glass: ";
+  font-weight: bold;
+}
