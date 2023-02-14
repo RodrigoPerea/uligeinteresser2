@@ -5,46 +5,123 @@
   list-style: none;
   text-decoration: none;
 }
-.produkt img {
-  width: 100%;
-}
 body {
-  background-color: antiquewhite;
+  background-color: #02132f;
 }
-.drink {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  margin-left: 1.5rem;
-  justify-content: space-between;
-  background-color: white;
-}
+
+/* mangler centrer den ud fra main */
 .cocktail_list_main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
   gap: 2rem;
 }
-.drink h2,
-p {
-  margin: 5px 0 5px 5px;
+
+.drink img {
+  width: 100%;
 }
-.recipeie {
-  background-color: gray;
-  color: white;
+.drink {
+  display: grid;
+  place-self: center;
+  /*   position: relative; */
+  flex-direction: column;
+  margin-left: 1.5rem;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  margin-top: 1.2rem;
+  mix-blend-mode: screen;
+  box-shadow: inset 0 0 4px #02132f;
+  cursor: pointer;
+}
+.drink:hover {
+  scale: 1.05;
+  transition-duration: 0.2s;
+}
+.drink h2 {
+  margin: 0.7rem 0 0.1rem 0.2rem;
+  font-size: 30px;
+  font-weight: 600;
+}
+.drink h3 {
+  font-size: 10px;
+  font-weight: 400;
+  margin: 0 0 10px 5px;
+}
+
+.drink h3::before {
+  content: "Land: ";
+  font-weight: bold;
+  color: #971500;
+}
+
+.drink .tag_line {
+  margin: 0 0 0.7rem 0.2rem;
+  font-size: 10px;
+  font-weight: 600;
+}
+.tags h4 {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 5px 5px 5px;
   text-align: center;
-  font-size: 1.2rem;
-  margin: 40px 0 20px 0;
-  font-weight: bold;
+  /*   border-bottom: 1px solid #97140074; */
 }
-.strIngredient1_alc_main::before {
-  content: "Main Bozz: ";
-  font-weight: bold;
+
+.drink .tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.strAlcoholic::before {
-  content: "Alcoholic drink: ";
-  font-weight: bold;
+.tags p {
+  font-size: 10px;
 }
-.strGlass::before {
-  content: "Glass: ";
-  font-weight: bold;
+.box_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.box {
+  margin: 0 5px 5px 5px;
+  background-color: #971500;
+  text-align: center;
+  min-height: 15px;
+  min-width: 25px;
+  color: white;
+  font-weight: 600;
+  /* display: inline-grid; */
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+  grid-gap: 3px;
+  align-items: center;
+}
+@media (min-width: 445px) {
+  .drink h2 {
+    margin: 0.7rem 0 0.1rem 0.2rem;
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .drink h3 {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0 0 10px 5px;
+  }
+
+  .drink h3::before {
+    content: "Land: ";
+    font-weight: bold;
+    color: #971500;
+  }
+
+  .drink .tag_line {
+    margin: 0 0 0.7rem 0.2rem;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .tags h4 {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 5px 5px 5px;
+    text-align: center;
+    /*   border-bottom: 1px solid #97140074; */
+  }
+}
+@media (min-width: 1260px) {
 }
