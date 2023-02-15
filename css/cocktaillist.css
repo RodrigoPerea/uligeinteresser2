@@ -27,6 +27,7 @@ body {
   margin-left: 1.5rem;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
+
   margin-top: 1.2rem;
   mix-blend-mode: screen;
   box-shadow: inset 0 0 4px #02132f;
@@ -63,6 +64,7 @@ body {
   font-weight: 600;
   margin: 0 5px 5px 5px;
   text-align: center;
+
   /*   border-bottom: 1px solid #97140074; */
 }
 
@@ -125,3 +127,5 @@ body {
 }
 @media (min-width: 1260px) {
 }
+
+/* popup alder test - kopieret fra codepen, må slev fpå det til at virke */

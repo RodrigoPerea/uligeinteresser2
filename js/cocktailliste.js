@@ -37,3 +37,5 @@ function vis(json) {
 //5. klone
 
 //6. skifte data
+
+// alder tjek test
