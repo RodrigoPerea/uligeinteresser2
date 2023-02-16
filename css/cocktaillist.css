@@ -10,27 +10,34 @@ body {
 }
 
 /* mangler centrer den ud fra main */
-.cocktail_list_main {
+/* .cocktail_list_main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
   gap: 2rem;
-}
+} */
 
 .drink img {
   width: 100%;
+  mix-blend-mode: screen;
+}
+.cocktail_list_main {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0.5rem;
+  margin-left: 1.5rem;
+  margin-top: 50px;
 }
 .drink {
   display: grid;
-  place-self: center;
-  /*   position: relative; */
-  flex-direction: column;
+  grid-template-columns: repeat(2, 3fr);
+  max-width: 600px;
   margin-left: 1.5rem;
+  margin-right: 1.5rem;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
-
+  background-color: #041b43ed;
   margin-top: 1.2rem;
-  mix-blend-mode: screen;
-  box-shadow: inset 0 0 4px #02132f;
+  /*   mix-blend-mode: screen; */
+  box-shadow: inset 0 0 4px #031d46;
   cursor: pointer;
 }
 .drink:hover {
@@ -41,11 +48,13 @@ body {
   margin: 0.7rem 0 0.1rem 0.2rem;
   font-size: 30px;
   font-weight: 600;
+  color: rgb(223, 223, 223); /* husk at ændre */
 }
 .drink h3 {
   font-size: 10px;
   font-weight: 400;
   margin: 0 0 10px 5px;
+  color: rgb(223, 223, 223); /* husk at ændre */
 }
 
 .drink h3::before {
@@ -58,12 +67,14 @@ body {
   margin: 0 0 0.7rem 0.2rem;
   font-size: 10px;
   font-weight: 600;
+  color: rgb(223, 223, 223); /* husk at ændre */
 }
 .tags h4 {
   font-size: 12px;
   font-weight: 600;
   margin: 0 5px 5px 5px;
   text-align: center;
+  color: rgb(223, 223, 223); /* husk at ændre */
 
   /*   border-bottom: 1px solid #97140074; */
 }
@@ -74,6 +85,7 @@ body {
 }
 .tags p {
   font-size: 10px;
+  color: rgb(223, 223, 223); /* husk at ændre */
 }
 .box_wrapper {
   display: grid;
@@ -94,38 +106,57 @@ body {
   grid-gap: 3px;
   align-items: center;
 }
-@media (min-width: 445px) {
+@media (min-width: 600px) {
+  .cocktail_list_main {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: 50px;
+  }
+  .drink {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   .drink h2 {
-    margin: 0.7rem 0 0.1rem 0.2rem;
     font-size: 35px;
-    font-weight: 600;
   }
   .drink h3 {
-    font-size: 10px;
-    font-weight: 400;
-    margin: 0 0 10px 5px;
+    font-size: 15px;
   }
-
-  .drink h3::before {
-    content: "Land: ";
-    font-weight: bold;
-    color: #971500;
-  }
-
   .drink .tag_line {
-    margin: 0 0 0.7rem 0.2rem;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 400;
   }
   .tags h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .tags p {
     font-size: 12px;
-    font-weight: 600;
-    margin: 0 5px 5px 5px;
-    text-align: center;
-    /*   border-bottom: 1px solid #97140074; */
   }
 }
-@media (min-width: 1260px) {
+@media (min-width: 900px) {
+  .cocktail_list_main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .drink {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .drink .tag_line {
+    font-size: 18px;
+  }
+  .tags p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1370px) {
+  .cocktail_list_main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* popup alder test - kopieret fra codepen, må slev fpå det til at virke */
