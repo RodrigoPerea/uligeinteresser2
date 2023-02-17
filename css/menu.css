@@ -150,6 +150,17 @@ footer {
   margin-left: 44%;
   font-size: 20px;
 }
+#text {
+  padding: 1%;
+  margin-left: 10%;
+}
+button {
+  background-color: #971500;
+  color: white;
+  border: solid 1px #971500;
+  padding: 1%;
+  margin-left: 5%;
+}
 /*--------------BILLEDER------------------*/
 .img1 {
   max-width: 25%;
