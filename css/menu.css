@@ -8,22 +8,7 @@
 body {
   background-color: #02132F;
 }
-/* burger menu */
-.burger {
-  display: none;
-  cursor: pointer;
-  z-index: 1;
-}
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; 
-  background-color: white;
-  z-index: 1;
-} 
+
 /*--------------NAVBAR------------------*/
 a {
   font-weight: 500;
@@ -62,6 +47,7 @@ a {
   display: flex;
   width: 40%;
   justify-content: space-around;
+  margin-left: -13%;
  
 }
 nav li :hover {
@@ -105,9 +91,7 @@ nav .logo {
   margin: 0 40px;
   
 }
-.nav-menu :hover {
- color: #CC8383;
-}
+
 /* links i navigationslinjen */
 .nav-item {
   list-style: none;
@@ -223,11 +207,11 @@ col_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-/*---------------MEDIA--------------------*/
-@media (min-width: 400px) {
-  .col_1-1 {
+---------------MEDIA--------------------
+/* @media (min-width: 400px) {
+  .col_1-1 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1fr);
   }
   a {
     font-size: 11px;
@@ -239,12 +223,17 @@ col_1-1 {
     font-size: 20px;
     margin-left: 15%;
   }
-  .img1 {
-    width: 50%;
-    grid-column: 2fr;
+  .img1 main {
+    max-width: 100%;
+    
   }
   h2 {
     font-size: 18px;
+    margin-top: 20%;
+  }
+  h3 {
+    font-size: 15px;
+    margin-top: 20%;
   }
   .logo {
     font-size: 35px;
@@ -268,9 +257,23 @@ col_1-1 {
     margin-left: 47%;
     margin-top: 2%;
   }
+  /* burger menu */
+/* .burger {
+  display: none;
+  cursor: pointer;
+  z-index: 1;
 }
-
-@media (min-width: 600px) {
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in; 
+  background-color: black;
+  z-index: 1;
+}  */
+/* @media (min-width: 600px) {
   .col_1-1 {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -278,15 +281,21 @@ col_1-1 {
     margin-left: 1.5rem;
     margin-top: 50px;
   }
-  .drink {
-    display: grid;
-    grid-template-columns: 1fr;
+  .logo {
+    font-size: 45px;
   }
-  .drink h2 {
-    font-size: 35px;
+  h1 {
+    font-size: 25px;
   }
-  .drink h3 {
-    font-size: 15px;
+  h2 {
+    font-size: 28px;
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+  h3 {
+    font-size: 20px;
+    margin-left: -77%;
+    margin-top: 15%;
   }
   a {
     font-size: 18px;
@@ -297,6 +306,9 @@ col_1-1 {
   .col_1-1 {
     display: grid;
     grid-template-columns: repeat(1fr);
+  }
+  .logo {
+    font-size: 55px;
   }
   .drink {
     display: grid;
@@ -309,4 +321,11 @@ col_1-1 {
     display: grid;
     grid-template-columns: repeat(1fr);
   }
-}
+  .logo {
+    font-size: 70px;
+  }
+  
+ 
+
+  
+}  */
