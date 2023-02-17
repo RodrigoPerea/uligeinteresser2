@@ -25,6 +25,49 @@ body {
   z-index: 1;
 } 
 /*--------------NAVBAR------------------*/
+a {
+  font-weight: 500;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  color: rgb(34, 34, 34);
+  margin: 0 10px 0 30px;
+  align-items: center;
+  font-family: francois_one;
+}
+
+.nav-bar-menu {
+  display: flex;
+  height: 8vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 50px;
+}
+.logodrink {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 0 2rem;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #ff7f23;
+  font-size: 20px;
+}
+.logodrink :hover {
+  scale: 1.05;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.nav-elementer {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+ 
+}
+nav li :hover {
+  scale: 1.05;
+  transition-duration: 0.3s;
+}
 
  /* ––––––––––– Dropdown menu ––––––––––––––––––– */
  .dropdown_menu {
@@ -95,44 +138,45 @@ nav .logo {
 }
 
 /*--------------TEKST------------------*/
-h1 {
+.logo {
   font-family: Teko;
   color: #ff7f23;
-  font-size: 65px;
-  margin-left: 42%;
+  font-size: 70px;
+  margin-left: 44%;
+  margin-top: 1%;
 }
-h2 {
+h1 {
   font-family: Francois_One;
   color: #ff7f23;
   margin-left: 20%;
   margin-top: 5%;
   font-size: 30px;
 }
-h3 {
+h2 {
   margin-left: 50%;
   margin-top: -33%;
   font-family: Francois_One;
   font-size: 25px;
   color: #ff7f23;
 }
-h4 {
+h3 {
   margin-left: 50%;
   margin-top: 2%;
   font-family: Francois_One;
   font-size: 18px;
   color: #ff7f23;
 }
-h5 {
+h4 {
   margin-left: 50%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #ff7f23;
+  color: white;
   font-size: 16px;
   margin-top: -2%;
 }
-h6 {
+h5 {
   margin-left: 50%;
   font-family:sans-serif;
-  color: #ff7f23;
+  color: white;
   font-size: 15px;
   margin-top: 1%;
 }
@@ -141,7 +185,7 @@ h6 {
   text-align: center;
   margin:6%;
   font-family: sans-serif;
-  color: #ff7f23;
+  color: white;
   font-size: 15px;
 }
 footer {
@@ -152,14 +196,19 @@ footer {
 }
 #text {
   padding: 1%;
-  margin-left: 9%;
+  margin-left: 1%;
 }
 button {
   background-color: #971500;
   color: white;
   border: solid 1px #971500;
   padding: 1%;
-  margin-left: 5%;
+  margin-left: 2%;
+}
+label {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: 24%;
 }
 /*--------------BILLEDER------------------*/
 .img1 {
@@ -173,4 +222,91 @@ button {
 col_1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+/*---------------MEDIA--------------------*/
+@media (min-width: 400px) {
+  .col_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  a {
+    font-size: 11px;
+  }
+  .logodrink {
+    font-size: 15px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 15%;
+  }
+  .img1 {
+    width: 50%;
+    grid-column: 2fr;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .logo {
+    font-size: 35px;
+    margin-top: 5%;
+  }
+  h4, h5, h6 {
+    font-size: 12px;
+  }
+  .h7 {
+    font-size: 12px;
+  }
+  label {
+    font-size: 12px;
+    margin-left: 7%;
+  }
+  #text {
+    font-size: 9px;
+  }
+  button {
+    font-size: 12px;
+    margin-left: 47%;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width: 600px) {
+  .col_1-1 {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    column-gap: 0.5rem;
+    margin-left: 1.5rem;
+    margin-top: 50px;
+  }
+  .drink {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .drink h2 {
+    font-size: 35px;
+  }
+  .drink h3 {
+    font-size: 15px;
+  }
+  a {
+    font-size: 18px;
+  }
+ 
+}
+@media (min-width: 900px) {
+  .col_1-1 {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+  }
+  .drink {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+ 
+}
+@media (min-width: 1370px) {
+  .col_1-1 {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+  }
 }

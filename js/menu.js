@@ -1,8 +1,8 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const burger = document.querySelector(".burger");
+const navElementer = document.querySelector(".nav-elementer");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  navElementer.classList.toggle("active");
 });
 
