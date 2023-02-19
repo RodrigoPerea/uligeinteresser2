@@ -1,5 +1,8 @@
-//endpoint, gemmer i variablen url
-const url = "https://drinks-7edc.restdb.io/rest/cocktails";
+const urlParams = new URLSearchParams(window.location.search);
+let cat = urlParams.get("ingrediens_1_spiritus");
+let productCategorySelector = document.getElementById("categorySelector");
+const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
+
 //objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
 //API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
 const options = {
@@ -7,6 +10,18 @@ const options = {
     "x-apikey": "a4b544f910bd22d3e426583aa3c5f164363e7",
   },
 };
+
+//filter
+productCategorySelector.onchange = () => {
+  location.reload();
+};
+if (cat !== null) {
+  url += `&category=${cat}`;
+  productCategorySelector.parentElement.style.display = "none";
+} else if (productCategorySelector.value !== "null") {
+  url += `&category=${productCategorySelector.value}`;
+}
+
 async function getData() {
   const response = await fetch(url, options);
   const json = await response.json();
