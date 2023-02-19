@@ -1,41 +1,37 @@
 //endpoint, gemmer i variablen url
-const url = "https://www.thecocktaildb.com/api.php";
-
+const url = "https://drinks-7edc.restdb.io/rest/cocktails";
 //objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
 //API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
 const options = {
   headers: {
-    "x-apikey": "63ea50de478852088da681a9",
+    "x-apikey": "a4b544f910bd22d3e426583aa3c5f164363e7",
   },
 };
 async function getData() {
   const response = await fetch(url, options);
   const json = await response.json();
+  console.log(response);
   vis(json);
+  /*   response.forEach(vis); //loope */
 }
-getData();
-
 const main = document.querySelector("main");
-const template = document.querySelector("template");
-
+const template = document.querySelector("listTemplate");
 function vis(json) {
-  console.log(product);
-  json.forEach((person) => {
+  json.forEach((cocktail) => {
     //looper igennem jason, og for hver person kloner jeg mit skabelon
     //og sætter det rigtige indhold ind
     const clone = template.cloneNode(true);
-    clone.querySelector(".navn").textcontent = person.navn;
+    clone.querySelector(".billede").src = "pic/" + cocktail.pictur;
+    clone.querySelector(".drink_navn").textcontent = cocktail.navn;
+    clone.querySelector(".land").textcontent = cocktail.land;
+    clone.querySelector(".tag_line").textcontent = cocktail.tag_line;
+    clone.querySelector(".ingrediens_1").textcontent = cocktail.ingrediens_1_spiritus;
+    clone.querySelector(".ingrediens_2").textcontent = cocktail.ingrediens_2_spiritus_2;
+    clone.querySelector(".smag_1").textcontent = cocktail.smag_1;
+    clone.querySelector(".smag_2").textcontent = cocktail.smag_2;
+    clone.querySelector(".oc_1").textcontent = cocktail.oc_1;
+    clone.querySelector(".oc_2").textcontent = cocktail.oc_2;
     main.appendChild(clone); //og appender til browser
   });
 }
-
-//4. fange template
-
-/* const template = document.querySelector("#smallProductTemplate").content; */
-/* console.log(template); */
-
-//5. klone
-
-//6. skifte data
-
-// alder tjek test
+getData();
