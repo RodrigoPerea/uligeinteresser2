@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-let cat = urlParams.get("ingrediens_1_spiritus");
+let cat = urlParams.get("spiritus_sortering");
 let productCategorySelector = document.getElementById("categorySelector");
 const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
 
@@ -40,7 +40,7 @@ function vis(json) {
     clone.querySelector(".drink_navn").textcontent = cocktail.navn;
     clone.querySelector(".land").textcontent = cocktail.land;
     clone.querySelector(".tag_line").textcontent = cocktail.tag_line;
-    clone.querySelector(".ingrediens_1").textcontent = cocktail.ingrediens_1_spiritus;
+    clone.querySelector(".ingrediens_1").textcontent = cocktail.spiritus_sortering;
     clone.querySelector(".ingrediens_2").textcontent = cocktail.ingrediens_2_spiritus_2;
     clone.querySelector(".smag_1").textcontent = cocktail.smag_1;
     clone.querySelector(".smag_2").textcontent = cocktail.smag_2;
