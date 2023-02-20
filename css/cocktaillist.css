@@ -160,6 +160,7 @@ body {
 }
 /* kategori ortering */
 .categorySelector label {
+  text-align: left;
   margin-bottom: 10px;
   font-weight: 600;
 }
