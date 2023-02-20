@@ -166,6 +166,8 @@ body {
 .categorySelector {
   display: grid;
   color: white;
+  /*   background-color: #042e72;
+  padding: 50px; */
 }
 select {
   display: grid;
