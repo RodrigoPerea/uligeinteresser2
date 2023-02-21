@@ -2,6 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 let cat = urlParams.get("spiritus_sortering");
 let productCategorySelector = document.getElementById("categorySelector");
 const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
+
 const main = document.querySelector("main");
 //objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
 //API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
@@ -15,17 +16,6 @@ const catUrl = `https://drinks-7edc.restdb.io/rest/cocktails?q={"$distinct":"spi
 
 //objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
 //API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
-
-//filter
-/* productCategorySelector.onchange = () => {
-  location.reload();
-};
-if (cat !== null) {
-  url += `&category=${cat}`;
-  productCategorySelector.parentElement.style.display = "none";
-} else if (productCategorySelector.value !== "null") {
-  url += `&category=${productCategorySelector.value}`;
-} */
 
 async function getData() {
   const response = await fetch(url, options);
@@ -52,15 +42,16 @@ function visSortering(json) {
     document.querySelector("#categorySelector").appendChild(clone);
   });
 }
-
+getSortering();
+const template = document.querySelector("#listTemplate").content;
 function vis(json) {
+  console.log(json);
   json.forEach((cocktail) => {
-    const template = document.querySelector("#listTemplate").content;
     //looper igennem jason, og for hver person kloner jeg mit skabelon
     //og sætter det rigtige indhold ind
     const clone = template.cloneNode(true);
     /* console.log("clone: " + template.innerHTML); */
-    clone.querySelector(".billede").src = "pic/" + cocktail.pictur;
+    /*     clone.querySelector(".billede").src = "pic/" + cocktail.pictur; */
     clone.querySelector(".drink_navn").textcontent = cocktail.navn;
     clone.querySelector(".land").textcontent = cocktail.land;
     clone.querySelector(".tag_line").textcontent = cocktail.tag_line;
@@ -74,3 +65,14 @@ function vis(json) {
   });
 }
 getData();
+
+//filter
+/* productCategorySelector.onchange = () => {
+  location.reload();
+};
+if (cat !== null) {
+  url += `&category=${cat}`;
+  productCategorySelector.parentElement.style.display = "none";
+} else if (productCategorySelector.value !== "null") {
+  url += `&category=${productCategorySelector.value}`;
+} */
