@@ -52,9 +52,8 @@ function vis(json) {
         <div class="tags">
             <div class="tag_spiritus">
                 <h3>Spiritus</h3>
-                <p class="ingrediens_1 box">${cocktail.ingrediens_1_spiritus}</p>
-                <p class="ingrediens_2 box">${cocktail.ingrediens_2_spiritus_2}</p>
-            </div>
+                <p class="ingrediens_1 box">${cocktail.spiritus_sortering}</p>
+                 </div>
             <div class="tag_smag">
                 <h3>Smag</h3>
                 <div class="box_wrapper">

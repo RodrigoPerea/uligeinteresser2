@@ -1,24 +1,5 @@
 [
   {
-    "_id": "63f33e3faa8607500006646c",
-    "navn": "Orange Hit",
-    "ingrediens_3": "1 cl. Limesaft",
-    "ingrediens_4": "Lemonsodavand",
-    "ingrediens_5": "Blomst til pynt",
-    "land": "Italien",
-    "tag_line": "Den perfekte sommerdrink",
-    "smag_1": "Frisk",
-    "smag_2": "Sød",
-    "oc_1": "Velkomst",
-    "opskrift": "Fremgangsmåde:\nAlle ingredienser blandes sammen, og nydes!",
-    "ingrediens_2_spiritus_2": "2 cl. Malibu",
-    "ingrediens_1_spiritus": "2 cl. Aperol ",
-    "pictur": "billede.jpg",
-    "spiritus_sortering": "Aperol",
-    "ingrediens_6": "",
-    "oc_2": ""
-  },
-  {
     "_id": "63f33ee2aa8607500006647d",
     "navn": "Princess",
     "ingrediens_3": "2 cl. Limesaft",
@@ -34,7 +15,7 @@
     "ingrediens_6": "",
     "oc_2": "",
     "opskrift": "Fremgangsmåde:\nAlle ingredienser pånær cider i shakes i shaker med isterninger.\nDerefter sigtes det i glasset, og afslutningsvis toppes den med hyldeblomstcider.",
-    "pictur": "billede.jpg",
+    "pictur": "princess.jpg",
     "spiritus_sortering": "Amaretto"
   },
   {
@@ -57,6 +38,25 @@
     "spiritus_sortering": "Rom"
   },
   {
+    "_id": "63f33e3faa8607500006646c",
+    "navn": "Orange Hit",
+    "ingrediens_3": "1 cl. Limesaft",
+    "ingrediens_4": "Lemonsodavand",
+    "ingrediens_5": "Blomst til pynt",
+    "land": "Italien",
+    "tag_line": "Den perfekte sommerdrink",
+    "smag_1": "Frisk",
+    "smag_2": "Sød",
+    "oc_1": "Velkomst",
+    "opskrift": "Fremgangsmåde:\nAlle ingredienser blandes sammen, og nydes!",
+    "ingrediens_2_spiritus_2": "2 cl. Malibu",
+    "ingrediens_1_spiritus": "2 cl. Aperol ",
+    "pictur": "billede.jpg",
+    "spiritus_sortering": "orange.jpg",
+    "ingrediens_6": "",
+    "oc_2": ""
+  },
+  {
     "_id": "63f33ce3aa8607500006645c",
     "navn": "Espresso Martini",
     "ingrediens_3": "4 cl. Espresso",
@@ -70,7 +70,7 @@
     "opskrift": "Fremgangsmåde:\nFyld glasset med isterninger.\nHæld vodka, kaffelikør, espresso og isterninger i en shaker.\nShake din Espresso Martini i 25-30 sekunder.\nFjern isterningerne fra glasset. \nSigt cocktail ned i glasset, der skal gerne være skum. \nLæg forsigtigt kaffebønner på toppen. \nServer straks.",
     "ingrediens_2_spiritus_2": "4 cl. Kaffelikør",
     "ingrediens_1_spiritus": "4 cl. Vodka",
-    "pictur": "billede.jpg",
+    "pictur": "espresso.jpg",
     "ingrediens_6": "",
     "oc_2": "",
     "spiritus_sortering": "Vodka"
@@ -105,13 +105,32 @@
     "opskrift": "Fremgangsmåde:\nIngredienserne shakes i en shaker.\nHæld i glasset, og pynt med mynte. ",
     "ingrediens_2_spiritus_2": "20 ml. Belsazar Red",
     "ingrediens_1_spiritus": "40 ml. Bulleit Bourbon",
-    "pictur": "billede.jpg",
+    "pictur": "rasberrycrust.jpg",
     "ingrediens_6": "",
     "land": "Spanien",
     "tag_line": "Sød cocktail til sommerdag ",
     "smag_1": "Sød",
     "smag_2": "",
     "spiritus_sortering": "Bourbon"
+  },
+  {
+    "_id": "63f3aef3aa8607500006765e",
+    "navn": "Harvey Wallbanger",
+    "ingrediens_3": "11 cl. Appelsinjuice",
+    "ingrediens_4": "Appelsin skal til pynt",
+    "ingrediens_5": "Isterninger",
+    "land": "Californien",
+    "tag_line": "En frisk og farverig drink",
+    "smag_1": "Frisk",
+    "smag_2": "Sød",
+    "oc_1": "Velkomst",
+    "oc_2": "Hygge",
+    "opskrift": "Fremgangsmåde:\nKom isterninger i et glas. \nHæld vodka, galliano og appelsinjuice i glasset. \nLad likøren flyde på toppen. \nTop med appelsinskal. ",
+    "ingrediens_2_spiritus_2": "2 cl. Galliano",
+    "ingrediens_1_spiritus": "3 cl. Vodka",
+    "pictur": "harveywallbanger.jpg",
+    "spiritus_sortering": "Vodka",
+    "ingrediens_6": ""
   },
   {
     "_id": "63f29ddfaa86075000065ebd",
@@ -129,7 +148,7 @@
     "ingrediens_1_spiritus": "12 cl. champagne",
     "ingrediens_2_spiritus_2": "2 cl. appelsinlikør",
     "ingrediens_6": "",
-    "pictur": "eget_billede.jpg",
+    "pictur": "rodrigos_billede_3.jpg",
     "spiritus_sortering": "Champagne"
   },
   {
@@ -152,44 +171,6 @@
     "spiritus_sortering": "Gin"
   },
   {
-    "_id": "63f3aef3aa8607500006765e",
-    "navn": "Harvey Wallbanger",
-    "ingrediens_3": "11 cl. Appelsinjuice",
-    "ingrediens_4": "Appelsin skal til pynt",
-    "ingrediens_5": "Isterninger",
-    "land": "Californien",
-    "tag_line": "En frisk og farverig drink",
-    "smag_1": "Frisk",
-    "smag_2": "Sød",
-    "oc_1": "Velkomst",
-    "oc_2": "Hygge",
-    "opskrift": "Fremgangsmåde:\nKom isterninger i et glas. \nHæld vodka, galliano og appelsinjuice i glasset. \nLad likøren flyde på toppen. \nTop med appelsinskal. ",
-    "ingrediens_2_spiritus_2": "2 cl. Galliano",
-    "ingrediens_1_spiritus": "3 cl. Vodka",
-    "pictur": "billede.jpg",
-    "spiritus_sortering": "Vodka",
-    "ingrediens_6": ""
-  },
-  {
-    "_id": "63f3b160aa860750000676be",
-    "navn": "Whiskey Sour ",
-    "ingrediens_3": "2 cl. Sukkersirup",
-    "ingrediens_4": "3 cl. Lime Saft",
-    "ingrediens_5": "1 cl. Pasteuriseret Æggehvider",
-    "ingrediens_6": "Isterninger",
-    "land": "USA",
-    "tag_line": "En lækker sursød whiskey drink",
-    "smag_1": "Sursød",
-    "oc_1": "Velkomst",
-    "oc_2": "Hygge",
-    "opskrift": "Fremgangsmåde:\nKom isterninger i din shaker.\nTilsæt derefter whisky, sukkersirup, limesaft og æggehvide.\nRyst din Whiskey Sour godt sammen.\nKom lidt isterninger i et passende glas.\nSi den lækre cocktail i glasset, og pynt med en skive lime.",
-    "ingrediens_1_spiritus": "5 cl. Bourbon Whiskey",
-    "pictur": "billede.jpg",
-    "spiritus_sortering": "Whiskey",
-    "ingrediens_2_spiritus_2": "",
-    "smag_2": ""
-  },
-  {
     "_id": "63f29d33aa86075000065eb8",
     "navn": "Magarita",
     "ingrediens_3": "Citronsaft",
@@ -205,7 +186,7 @@
     "ingrediens_1_spiritus": "4cl. Tequila",
     "ingrediens_2_spiritus_2": "2 cl. Triple sec",
     "ingrediens_6": "Evt sirup",
-    "pictur": "billede.jpg",
+    "pictur": "magarita.jpg",
     "spiritus_sortering": "Tequila"
   },
   {
@@ -245,5 +226,24 @@
     "ingrediens_2_spiritus_2": "2-3 skriver frisk ananas",
     "pictur": "eget_billede.jpg",
     "spiritus_sortering": "Rom"
+  },
+  {
+    "_id": "63f3b160aa860750000676be",
+    "navn": "Whiskey Sour ",
+    "ingrediens_3": "2 cl. Sukkersirup",
+    "ingrediens_4": "3 cl. Lime Saft",
+    "ingrediens_5": "1 cl. Pasteuriseret Æggehvider",
+    "ingrediens_6": "Isterninger",
+    "land": "USA",
+    "tag_line": "En lækker sursød whiskey drink",
+    "smag_1": "Sursød",
+    "oc_1": "Velkomst",
+    "oc_2": "Hygge",
+    "opskrift": "Fremgangsmåde:\nKom isterninger i din shaker.\nTilsæt derefter whisky, sukkersirup, limesaft og æggehvide.\nRyst din Whiskey Sour godt sammen.\nKom lidt isterninger i et passende glas.\nSi den lækre cocktail i glasset, og pynt med en skive lime.",
+    "ingrediens_1_spiritus": "5 cl. Bourbon Whiskey",
+    "pictur": "whiskeysour.jpg",
+    "spiritus_sortering": "Whiskey",
+    "ingrediens_2_spiritus_2": "",
+    "smag_2": ""
   }
 ]
