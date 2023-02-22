@@ -37,9 +37,6 @@ function visProdukt(produkt) {
     copy.querySelector("pictur").src = imagePath;
     copy.querySelector("a").href = "product.html?id=" + produkt.id;
  
-
-  
-
     document.querySelector("main").appendChild(copy);
 }
 
