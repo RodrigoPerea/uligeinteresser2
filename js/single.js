@@ -33,6 +33,7 @@ function visProdukt(produkt) {
     copy.querySelector(".oc_1").textContent = produkt.oc_1;
     copy.querySelector(".oc_2").textContent = produkt.oc_2;
     copy.querySelector(".opskrift").textContent = produkt.opskrift;
+    copy.querySelector(".tag").textContent = produkt.tag_line;
     copy.querySelector("pictur").src = imagePath;
     copy.querySelector("a").href = "product.html?id=" + produkt.id;
  
