@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <div class="logo">Cheers</div>
+    <h1 class="logo">Cheers</h1>
+    <a href="index.html">
+        <div class="logodrink">
+            <img src="/drinklogo.png" alt="logo">
+        </div>
+    </a>
     <nav class="nav-bar-menu">
-        <a href="index.html">
-        </a>
         <ul class="nav-elementer">
             <li>
                 <a href="index.html">Kategorier</a>
@@ -23,22 +26,40 @@
             </li>
         </ul>
         <div class="burger">
-            <div class="line line1"></div>
-            <div class="line line2"></div>
-            <div class="line line3"></div>
-            <div class="line line4"></div>
-
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
     </nav>
     <main>
-
+        <template="templateTwo">
+            <div class="forside_wrapper">
+                <img src="/roddrink.jpg" alt="drink">
+                <div class="text_wrapper">
+                    <h2 class="kategori1">OMRÅDER</h2>
+                </div>
+                <img src="/roddrink.jpg" alt="drink">
+                <div class="text_wrapper">
+                    <h2 class="kategori2">ANLEDNING</h2>
+                </div>
+                <img src="/roddrink.jpg" alt="drink">
+                <div class="text_wrapper">
+                    <h2 class="kategori3">STEMNING</h2>
+                </div>
+                <img src="/roddrink.jpg" alt="drink">
+                <div class="text_wrapper">
+                    <h2 class="kategori4">INDHOLD</h2>
+                </div>
+            </div>
+            </template>
 
 
 
     </main>
 
     <footer>
-        <p>@D 2023</p>
+        <p>@CHEERS 2023</p>
     </footer>
     <script src="js/menu.js"></script>
 
