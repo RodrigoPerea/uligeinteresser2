@@ -1,79 +1,78 @@
 const urlParams = new URLSearchParams(window.location.search);
 let cat = urlParams.get("spiritus_sortering");
 let productCategorySelector = document.getElementById("categorySelector");
-/* const url = "https://drinks-7edc.restdb.io/rest/cocktails"; */ //endpoint, gemmer i variablen url
+// const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
 const url = "cocktails.json";
+const select = document.getElementById("categorySelector");
 
 const main = document.querySelector("main");
-//objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
-//API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
 const options = {
   headers: {
     "x-apikey": "63f36afc478852088da684b5",
   },
 };
-
-const catUrl = `https://drinks-7edc.restdb.io/rest/cocktails?q={"$distinct":"spiritus_sortering"}&sort=spiritus_sortering`; //endpoint, gemmer i variablen url
-
-//objekt, de rindeholder et andet objekt, så den ved den har adgang til databasen
-//API nøgel blir pakket ind i mit objekt så jeg kan sende den med fetch
-
 async function getData() {
   const response = await fetch(url, options);
   const json = await response.json();
   console.log("json: " + json);
   vis(json);
+  getOptionsForDropdown(json);
 }
-async function getSortering() {
-  console.log("getSotering: ");
-  const response = await fetch(catUrl, options);
-  const json = await response.json();
-  console.log("json: " + json);
-  visSortering(json);
-}
-
-function visSortering(json) {
-  console.log("visSortering: ");
-  json.forEach((spiritus) => {
-    const template = document.querySelector("#sortering").content;
-    const clone = template.cloneNode(true);
-    console.log("sortering: " + spiritus);
-    clone.querySelector("option").value = spiritus;
-    clone.querySelector("option").textcontent = spiritus;
-    document.querySelector("#categorySelector").appendChild(clone);
+const getOptionsForDropdown = (json) => {
+  json.forEach((item) => {
+    const option = `<option value="${item.spiritus_sortering}">${item.spiritus_sortering}</option>`;
+    select.innerHTML += option;
   });
-}
-getSortering();
-const template = document.querySelector("#listTemplate").content;
+};
+const sortBySpirit = async (event) => {
+  console.log("😂", event.target.value); // This gets the value of the option in the select field/CR
+  const value = event.target.value;
+  if (value === "Alle") {
+    getData();
+  } else {
+    const catUrl = `https://drinks-7edc.restdb.io/rest/cocktails?q={"spiritus_sortering":"${value}"}`;
+    const response = await fetch(catUrl, options);
+    const json = await response.json();
+    console.log("👍", json);
+    vis(json);
+  }
+};
+select.addEventListener("change", (event) => sortBySpirit(event));
 function vis(json) {
-  console.log(json);
+  const template = document.querySelector("#listTemplate");
+  template.innerHTML = "";
+  console.log("😒", json);
   json.forEach((cocktail) => {
-    //looper igennem jason, og for hver person kloner jeg mit skabelon
-    //og sætter det rigtige indhold ind
-    const clone = template.cloneNode(true);
-    /* console.log("clone: " + template.innerHTML); */
-    /*     clone.querySelector(".billede").src = "pic/" + cocktail.pictur; */
-    clone.querySelector(".drink_navn").textcontent = cocktail.navn;
-    clone.querySelector(".land").textcontent = cocktail.land;
-    clone.querySelector(".tag_line").textcontent = cocktail.tag_line;
-    clone.querySelector(".ingrediens_1").textcontent = cocktail.spiritus_sortering;
-    clone.querySelector(".ingrediens_2").textcontent = cocktail.ingrediens_2_spiritus_2;
-    clone.querySelector(".smag_1").textcontent = cocktail.smag_1;
-    clone.querySelector(".smag_2").textcontent = cocktail.smag_2;
-    clone.querySelector(".oc_1").textcontent = cocktail.oc_1;
-    clone.querySelector(".oc_2").textcontent = cocktail.oc_2;
-    main.appendChild(clone); //og appender til browser
+    const drinkTemplate = `<div class="drink">
+    <img class="billede" src="pic/${cocktail.pictur}" alt="${cocktail.navn}">
+    <div class="drink-content">
+        <h2 class="drink_navn">${cocktail.navn}</h2>
+        <span class="land">${cocktail.land}</span>
+        <span class="tag_line">${cocktail.tag_line}</span>
+        <div class="tags">
+            <div class="tag_spiritus">
+                <h3>Spiritus</h3>
+                <p class="ingrediens_1 box">${cocktail.ingrediens_1_spiritus}</p>
+                <p class="ingrediens_2 box">${cocktail.ingrediens_2_spiritus_2}</p>
+            </div>
+            <div class="tag_smag">
+                <h3>Smag</h3>
+                <div class="box_wrapper">
+                    <p class="smag_1 box">${cocktail.smag_1}</</p>
+                    <p class="smag_2 box">${cocktail.smag_2}</p>
+                </div>
+            </div>
+            <div class="tag_oc">
+                <h3>Lejlighed</h3>
+                <div class="box_wrapper">
+                    <p class="oc_1 box">${cocktail.oc_1}</p>
+                    <p class="oc_2 box">${cocktail.oc_2}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`;
+    template.innerHTML += drinkTemplate;
   });
 }
 getData();
-
-//filter
-/* productCategorySelector.onchange = () => {
-  location.reload();
-};
-if (cat !== null) {
-  url += `&category=${cat}`;
-  productCategorySelector.parentElement.style.display = "none";
-} else if (productCategorySelector.value !== "null") {
-  url += `&category=${productCategorySelector.value}`;
-} */

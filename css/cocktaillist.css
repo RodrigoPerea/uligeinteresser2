@@ -16,29 +16,30 @@ body {
   gap: 2rem;
 } */
 
-.drink img {
-  width: 100%;
-  mix-blend-mode: screen;
-}
-.cocktail_list_main {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 0.5rem;
-  margin-left: 1.5rem;
-  margin-top: 50px;
-}
-.drink {
+#listTemplate {
   display: grid;
   grid-template-columns: repeat(2, 3fr);
-  max-width: 600px;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   justify-content: space-between;
-  background-color: #041b43ed;
   margin-top: 1.2rem;
-  /*   mix-blend-mode: screen; */
   box-shadow: inset 0 0 4px #031d46;
   cursor: pointer;
+  gap: 24px;
+}
+.drink {
+  background-color: #041b43ed;
+}
+.drink img {
+  width: 100%;
+  mix-blend-mode: screen;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center center;
+}
+.drink-content {
+  padding: 24px;
+  color: rgb(223, 223, 223);
 }
 .drink:hover {
   scale: 1.05;
@@ -48,35 +49,35 @@ body {
   margin: 0.7rem 0 0.1rem 0.2rem;
   font-size: 30px;
   font-weight: 600;
-  color: rgb(223, 223, 223); /* husk at ændre */
 }
-.drink h3 {
-  font-size: 10px;
+.drink .land {
+  display: block;
   font-weight: 400;
   margin: 0 0 10px 5px;
-  color: rgb(223, 223, 223); /* husk at ændre */
 }
 
-.drink h3::before {
+.drink .land::before {
   content: "Land: ";
   font-weight: bold;
   color: #971500;
 }
 
 .drink .tag_line {
+  display: block;
   margin: 0 0 0.7rem 0.2rem;
-  font-size: 10px;
   font-weight: 600;
-  color: rgb(223, 223, 223); /* husk at ændre */
 }
-.tags h4 {
+.tags h3 {
   font-size: 12px;
   font-weight: 600;
   margin: 0 5px 5px 5px;
-  text-align: center;
-  color: rgb(223, 223, 223); /* husk at ændre */
-
-  /*   border-bottom: 1px solid #97140074; */
+}
+/* .cocktail_list_main {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0.5rem;
+  margin-left: 1.5rem;
+  margin-top: 50px;
 }
 
 .drink .tags {
@@ -85,7 +86,7 @@ body {
 }
 .tags p {
   font-size: 10px;
-  color: rgb(223, 223, 223); /* husk at ændre */
+  color: rgb(223, 223, 223);
 }
 .box_wrapper {
   display: grid;
@@ -99,14 +100,13 @@ body {
   min-width: 25px;
   color: white;
   font-weight: 600;
-  /* display: inline-grid; */
   display: flex;
   justify-content: center;
   font-size: 3em;
   grid-gap: 3px;
   align-items: center;
-}
-@media (min-width: 600px) {
+} */
+/* @media (min-width: 600px) {
   .cocktail_list_main {
     display: grid;
     grid-template-columns: 2fr 2fr;
@@ -114,7 +114,7 @@ body {
     margin-left: 1.5rem;
     margin-top: 50px;
   }
-  .drink {
+  #listTemplate {
     display: grid;
     grid-template-columns: 1fr;
   }
@@ -135,8 +135,8 @@ body {
   .tags p {
     font-size: 12px;
   }
-}
-@media (min-width: 900px) {
+} */
+/* @media (min-width: 900px) {
   .cocktail_list_main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -157,7 +157,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-}
+} */
 /* kategori ortering */
 .categorySelector label {
   text-align: left;
