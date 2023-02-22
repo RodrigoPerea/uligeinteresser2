@@ -1,10 +1,10 @@
-const burger = document.querySelector(".burger");
-const navBarMenu = document.querySelector(".nav-bar-menu");
+// const burger = document.querySelector(".burger");
+// const navBarMenu = document.querySelector(".nav-bar-menu");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  navBarMenu.classList.toggle("active");
-});
+// burger.addEventListener("click", () => {
+//   burger.classList.toggle("active");
+//   navBarMenu.classList.toggle("active");
+// });
 
 console.log("sidenVises");
 
@@ -18,7 +18,7 @@ async function hentData() {
     data.forEach(visProdukt);
 }
 
-document.querySelector(".").textContent = ;
+// document.querySelector(".").textContent = ;
 
 function visProdukt(produkt) {
     console.log(produkt);
@@ -26,12 +26,14 @@ function visProdukt(produkt) {
     const id = produkt.id;
     const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
     const copy = template.cloneNode(true);
-    copy.querySelector(".navn").textContent = produkt.productdisplayname;
-    copy.querySelector("h4").textContent = produkt.subcategory;
-    copy.querySelector(".pris span").textContent = produkt.price;
-    copy.querySelector(".rabat span").textContent = produkt.discount;
-    copy.querySelector(".pris2").textContent = Math.round(produkt.price - (produkt.price * produkt.discount) / 100);
-    copy.querySelector("img").src = imagePath;
+    copy.querySelector(".navn").textContent = produkt.navn;
+    copy.querySelector(".land").textContent = produkt.land;
+    copy.querySelector(".smag1").textContent = produkt.smag_1;
+    copy.querySelector(".smag2").textContent = produkt.smag_2;
+    copy.querySelector(".oc_1").textContent = produkt.oc_1;
+    copy.querySelector(".oc_2").textContent = produkt.oc_2;
+    copy.querySelector(".opskrift").textContent = produkt.opskrift;
+    copy.querySelector("pictur").src = imagePath;
     copy.querySelector("a").href = "product.html?id=" + produkt.id;
  
 
