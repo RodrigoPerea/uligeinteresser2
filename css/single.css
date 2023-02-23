@@ -123,8 +123,8 @@ h1 {
   font-size: 30px;
 }
 h2 {
-  margin-left: 50%;
-  margin-top: -33%;
+  /*   margin-left: 50%; */
+  /* margin-top: -33%; */
   font-family: Francois_One;
   font-size: 25px;
   color: #ff7f23;
