@@ -18,7 +18,7 @@ body {
 
 #listTemplate {
   display: grid;
-  grid-template-columns: repeat(2, 3fr);
+  grid-template-columns: repeat(1, 3fr);
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   justify-content: space-between;
@@ -55,13 +55,11 @@ body {
   font-weight: 400;
   margin: 0 0 10px 5px;
 }
-
 .drink .land::before {
   content: "Land: ";
   font-weight: bold;
   color: #971500;
 }
-
 .drink .tag_line {
   display: block;
   margin: 0 0 0.7rem 0.2rem;
@@ -72,93 +70,44 @@ body {
   font-weight: 600;
   margin: 0 5px 5px 5px;
 }
-/* .cocktail_list_main {
+.drink .tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.box {
+  margin: 0 5px 5px 5px;
+  background-color: #971500;
+  text-align: center;
+  min-width: 25px;
+  color: white;
+  grid-gap: 3px;
+  align-items: center;
+}
+.cocktail_list_main {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 0.5rem;
   margin-left: 1.5rem;
   margin-top: 50px;
 }
-
-.drink .tags {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.tags p {
-  font-size: 10px;
-  color: rgb(223, 223, 223);
-}
-.box_wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-.box {
-  margin: 0 5px 5px 5px;
-  background-color: #971500;
-  text-align: center;
-  min-height: 15px;
-  min-width: 25px;
-  color: white;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  font-size: 3em;
-  grid-gap: 3px;
-  align-items: center;
-} */
-/* @media (min-width: 600px) {
-  .cocktail_list_main {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    column-gap: 0.5rem;
-    margin-left: 1.5rem;
-    margin-top: 50px;
-  }
+@media (min-width: 600px) {
   #listTemplate {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 3fr);
   }
-  .drink h2 {
-    font-size: 35px;
-  }
-  .drink h3 {
-    font-size: 15px;
-  }
-  .drink .tag_line {
-    font-size: 15px;
-    font-weight: 400;
-  }
-  .tags h4 {
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .tags p {
-    font-size: 12px;
-  }
-} */
-/* @media (min-width: 900px) {
-  .cocktail_list_main {
+}
+@media (min-width: 900px) {
+  #listTemplate {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
-  .drink {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .drink .tag_line {
-    font-size: 18px;
-  }
-  .tags p {
-    font-size: 14px;
-  }
 }
 @media (min-width: 1370px) {
-  .cocktail_list_main {
+  #listTemplate {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
-} */
-/* kategori ortering */
+}
 .categorySelector label {
   text-align: left;
   margin-bottom: 10px;
@@ -167,8 +116,6 @@ body {
 .categorySelector {
   display: grid;
   color: white;
-  /*   background-color: #042e72;
-  padding: 50px; */
 }
 select {
   display: grid;
@@ -177,5 +124,3 @@ select {
   text-align: center;
   max-width: 150px;
 }
-
-/* popup alder test - kopieret fra codepen, må slev fpå det til at virke */

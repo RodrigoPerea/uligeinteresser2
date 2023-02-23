@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 let cat = urlParams.get("spiritus_sortering");
 let productCategorySelector = document.getElementById("categorySelector");
-// const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
-const url = "cocktails.json";
+const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
+// const url = "cocktails.json";
 const select = document.getElementById("categorySelector");
 
 const main = document.querySelector("main");
@@ -37,13 +37,20 @@ const sortBySpirit = async (event) => {
     vis(json);
   }
 };
+
+// copy.querySelector("a").href = `produkt.html?id=${product.id}`;
+
+{
+  /* <a class="read_more" href=" "> */
+}
+
 select.addEventListener("change", (event) => sortBySpirit(event));
 function vis(json) {
   const template = document.querySelector("#listTemplate");
   template.innerHTML = "";
   console.log("😒", json);
   json.forEach((cocktail) => {
-    const drinkTemplate = `<div class="drink">
+    const drinkTemplate = `<a href = "single.html?id=${cocktail.id}"> <div class="drink">
     <img class="billede" src="pic/${cocktail.pictur}" alt="${cocktail.navn}">
     <div class="drink-content">
         <h2 class="drink_navn">${cocktail.navn}</h2>
@@ -70,7 +77,7 @@ function vis(json) {
             </div>
         </div>
     </div>
-</div>`;
+</div> </a>`;
     template.innerHTML += drinkTemplate;
   });
 }
