@@ -8,8 +8,8 @@
 body {
   background-color: #02132f;
 }
-img {
-  /* width: 250px; */
+.kategori_wrapper img {
+  width: 250px;
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -72,5 +72,8 @@ img {
   }
   .spiritus_style {
     max-width: 900px;
+  }
+  .logodrink img {
+    margin-top: -8.5%;
   }
 }

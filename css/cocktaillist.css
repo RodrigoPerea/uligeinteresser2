@@ -30,6 +30,12 @@ body {
 .drink {
   background-color: #041b43ed;
 }
+footer p {
+  font-family: Oswald;
+}
+.cocktail_list_main {
+  font-family: Mada-light;
+}
 .drink img {
   width: 100%;
   mix-blend-mode: screen;

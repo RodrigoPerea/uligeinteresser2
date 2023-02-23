@@ -1,3 +1,4 @@
+@media (min-width: 500px) {
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +11,14 @@ body {
 }
 
 /*--------------NAVBAR------------------*/
-a {
+li a {
   font-weight: 500;
   line-height: 1.6rem;
   font-size: 12px;
   color: rgb(34, 34, 34);
   margin: 0 10px 0 30px;
   align-items: center;
-  font-family: francois_one;
+  font-family: Oswald;
 }
 .nav-bar-menu {
   display: flex;
@@ -49,46 +50,7 @@ nav li :hover {
   scale: 1.05;
   transition-duration: 0.3s;
 }
-/* ––––––––––– Dropdown menu ––––––––––––––––––– */
-.dropdown_menu {
-  display: none;
-  pointer-events: none;
-}
-.navbar1 ul li:hover .dropdownmenu {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 100%;
-}
-.navbar ul li:hover .dropdown_menu ul {
-  display: block;
-  margin: 10px;
-}
-.navbar ul li:hover i.dropdown_menu ul li {
-  width: 150px;
-  padding: 10px;
-}
-/* selve logoet */
-nav .logo {
-  /* angiver størrelsen */
-  width: 70px;
-}
-.nav-menu {
-  display: flex;
-  justify-content: right;
-  list-style: none;
-  position: relative;
-  gap: 10px;
-  margin: 0 40px;
-}
-/* styling af tekst i navigationslinjen */
-.nav-link {
-  text-decoration: none;
-  color: black;
-  font-size: 20px;
-  font-family: "Quicksand";
-  transition: all 0.3s;
-}
+
 /*--------------FONTE------------------*/
 @font-face {
   font-family: Teko;
@@ -110,7 +72,7 @@ nav .logo {
 .logo {
   font-family: Teko;
   color: #ff7f23;
-  font-size: 70px;
+  font-size: 65px;
   margin-left: 40%;
   margin-top: 1%;
 }
@@ -185,7 +147,7 @@ h3 {
   color: #ff7f23;
 }
 h4 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: Mada-light;
   color: white;
   font-size: 15px;
 }
@@ -203,12 +165,6 @@ h5 {
 p {
   font-family: mada-light;
   font-size: 14px;
-}
-footer p {
-  color: #ff7f23;
-  
-  margin-left: 44%;
-  font-size: 20px;
 }
 .oplevelse_wrapper #text {
   margin-top: -10%;
@@ -268,14 +224,14 @@ footer p {
     display: grid;
     grid-template-columns: 1fr;
   }
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
     font-size: 15px;
     color: rgb(34, 34, 34);
     margin: 0 10px 0 30px;
     align-items: center;
-    font-family: francois_one;
+    font-family: Oswald;
   }
   .logodrink img {
     max-width: 45px;
@@ -289,16 +245,16 @@ footer p {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
     font-size: 11px;
     color: rgb(34, 34, 34);
     margin: 0 10px 0 30px;
     align-items: center;
-    font-family: francois_one;
+    font-family: Oswald;
   }
-  .logodrink {
+  .logodrink img {
     max-width: 30px;
     position: absolute;
     margin-top: -12.5%;
@@ -347,19 +303,20 @@ footer p {
 
 }
 @media (min-width: 500px) {
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
-    font-size: px;
+    font-size: 15px;
     color: rgb(34, 34, 34);
     margin: 10px 0px 0 10px;
     align-items: center;
-    font-family: francois_one;
+    font-family: Oswald;
+    margin-top: 2%;
   }
   .logodrink img {
     max-width: 25px;
     position: absolute;
-    margin-top: -17%;
+    margin-top: -12%;
     margin-left: 33%;
   }
   .singel_wrapper img {
@@ -370,6 +327,7 @@ footer p {
   }
   .logo {
     font-size: 40px;
+    margin-top: 5%;
   }
   .navn {
     font-size: 20px;
@@ -379,9 +337,7 @@ footer p {
   .land {
     margin-left: 9%;
   }
-  /* img {
-    max-width: 50%;
-  } */
+
   .singel_wrapper .oc_1::before {
     content: "Anledning: ";
     color: #971500;
@@ -434,12 +390,10 @@ footer p {
  position: relative;
 padding: 5%;
 margin-top: 5%;
-
- 
 }
 .text_wrapper h2 {
   font-size: 20px;
-  font-family: Amaranth-bold;
+  font-family: Oswald;
   margin-left: 1%;
   margin-top: 4%;
 }
@@ -457,7 +411,7 @@ margin-top: 5%;
   top: 90px;
   bottom: 0;
   right: 0;
-  left: 66%;
+  left: 68%;
  }
  .text_wrapper .kategori3{
   position: absolute;
@@ -475,12 +429,14 @@ margin-top: 5%;
   right: 0;
   left: 65%;
  }
- footer {
-  margin-top: 10%;
-  margin-left: -10%;
+ li a {
+  font-family: Oswald;
  }
- li {
-  font-family: Mada-light;
+ footer p {
+  color: #ff7f23;
+  font-size: 20px;
+  font-family: Oswald;
+  margin-left: 38%;
  }
 /*-------------MEDIA FORSIDE-----------------*/
 @media (min-width: 900px) {
@@ -493,22 +449,16 @@ margin-top: 5%;
     position: relative;
     padding: 5%;
     margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 15%;
    }
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
     font-size: 16px;
     color: rgb(34, 34, 34);
     margin: 0 10px 0 30px;
     align-items: center;
-    font-family: amaranth-bold;
-    
-  }
-  footer p {
-    font-size: 20px;
-    margin-left: -4%;
-    font-family: amaranth-bold;
+    font-family: Oswald;
   }
   .logo {
     font-size: 55px;
@@ -516,7 +466,9 @@ margin-top: 5%;
     margin-top: 2%;
   }
   .logodrink img {
-    max-width: 40px;
+    max-width: 20px;
+    margin-top: 5%;
+    margin-left: 35%;
   }
   .text_wrapper .kategori1{
     position: absolute;
@@ -525,7 +477,7 @@ margin-top: 5%;
     bottom: 10px;
     right: 20px;
     left: 18%;
-    font-style:italic;
+    
    }
    .text_wrapper .kategori2{
      position: absolute;
@@ -534,7 +486,7 @@ margin-top: 5%;
      bottom: 0;
      right: 0;
      left: 68%;
-     font-style:italic;
+     
     }
     .text_wrapper .kategori3{
      position: absolute;
@@ -543,7 +495,7 @@ margin-top: 5%;
      bottom: 0;
      right: 0;
      left: 18%;
-     font-style:italic;
+     
     }
     .text_wrapper .kategori4{
      position: absolute;
@@ -552,12 +504,12 @@ margin-top: 5%;
      bottom: 0;
      right: 0;
      left: 69%;
-     font-style:italic;
+     
     }
     .text_wrapper h2 {
       font-size: 30px;
-      font-family: Mada-light;
-      margin-left: -1.5%;
+      font-family: Oswald;
+      margin-left: 5%;
     }
  }
 @media (min-width: 700px) {
@@ -572,21 +524,16 @@ margin-top: 5%;
     margin-top: 5%;
     
    }
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
-    font-size: 11px;
+    font-size: 14px;
     color: rgb(34, 34, 34);
     margin: 0 10px 0 30px;
     align-items: center;
-    font-family: amaranth-bold;
-    
+    font-family: Oswald;
   }
-  footer p {
-    font-size: 18px;
-    margin-left: -5%;
-    font-family: amaranth-bold;
-  }
+
   .logo {
     font-size: 50px;
     margin-left: 41%;
@@ -594,7 +541,7 @@ margin-top: 5%;
   }
   .logodrink img {
     max-width: 35px;
-    margin-top: -2%;
+    margin-top: -11%;
   }
   .text_wrapper .kategori1{
     position: absolute;
@@ -603,7 +550,7 @@ margin-top: 5%;
     bottom: 10px;
     right: 20px;
     left: 18%;
-    font-style:italic;
+    
    }
    .text_wrapper .kategori2{
      position: absolute;
@@ -611,8 +558,8 @@ margin-top: 5%;
      top: 21%;
      bottom: 0;
      right: 0;
-     left: 67%;
-     font-style:italic;
+     left: 71%;
+     
     }
     .text_wrapper .kategori3{
      position: absolute;
@@ -621,7 +568,7 @@ margin-top: 5%;
      bottom: 0;
      right: 0;
      left: 18%;
-     font-style:italic;
+     
     }
     .text_wrapper .kategori4{
      position: absolute;
@@ -630,44 +577,47 @@ margin-top: 5%;
      bottom: 0;
      right: 0;
      left: 69%;
-     font-style:italic;
+     
     }
     .text_wrapper h2 {
       font-size: 25px;
-      font-family: Mada-light;
+      font-family: Oswald;
       margin-left: -1.5%;
       margin-top: 1%;
     }
+    footer p {
+      margin-left: 41%;
+    }
  }
 @media (min-width: 1440px) {
-  .logodrink   { 
-    margin-left: 37%;
-    max-width: 90px;
-    margin-top: -9%;
+  .logodrink img { 
+    margin-left: 36%;
+    max-width: 50px;
+    margin-top: -7.5%;
   }
   .logo {
-    font-size: 90px;
+    font-size: 80px;
   }
-  a {
+  li a {
     font-weight: 300;
     line-height: 1.6rem;
-    font-size: 25px;
+    font-size: 22px;
     color: rgb(34, 34, 34);
     margin: 0 20px 0 30px;
     align-items: center;
-    font-family: amaranth-bold;
+    font-family: Oswald;
     
   }
   .forside_wrapper img {
-    width: 600px;
-    height: 650px;
+    width: 500px;
+    height: 550px;
     background-size: cover;
     display: inline-block;
     cursor: pointer;
     position: relative;
-    padding: 5%;
+    padding: 2%;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 22%;
    }
   .text_wrapper .kategori1{
     position: absolute;
@@ -683,7 +633,7 @@ margin-top: 5%;
      top: 22%;
      bottom: 0;
      right: 0;
-     left: 69.5%;
+     left: 71%;
     }
     .text_wrapper .kategori3{
      position: absolute;
@@ -691,7 +641,7 @@ margin-top: 5%;
      top: 72%;
      bottom: 0;
      right: 0;
-     left: 20%;
+     left: 19%;
     }
     .text_wrapper .kategori4{
      position: absolute;
@@ -703,13 +653,14 @@ margin-top: 5%;
     }
     .text_wrapper h2 {
       font-size: 40px;
-      font-family: Mada-light;
+      font-family: Oswald;
       margin-left: -1.5%;
     }
     footer p {
-      margin-left: 1%;
+      margin-left: 44%;
       font-size: 25px;
     }
+  }
 }
 
 

@@ -5,7 +5,7 @@ const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i
 // const url = "cocktails.json";
 const select = document.getElementById("categorySelector");
 
-const main = document.querySelector("main");
+const main = document.querySelector("main").content;
 const options = {
   headers: {
     "x-apikey": "63f36afc478852088da684b5",
