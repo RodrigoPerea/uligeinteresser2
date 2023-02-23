@@ -1,35 +1,33 @@
 console.log("sidenVises");
 
 const urlParams = new URLSearchParams(window.location.search);
-const url = `https://kea-alt-del.dk/t7/api/products?limit=20&category=${cat}`;
+const kat = urlParams.get("kat");
+const url = `https://drinksdatany-673e.restdb.io/rest/drinks-cocktails`;
 
-async function hentData() {
-    const response = await fetch(url);
+const options = {
+    headers: {
+        "x.apikey": "63f7c647478852088da685b9",
+    },
+};
+
+async function hentData(){
+    console.log("hentData");
+    const response = await fetch(url, options);
     const data = await response.json();
     console.log(data);
-    data.forEach(visProdukt);
-}
-
-document.querySelector(".").textContent = ;
-
-function visProdukt(produkt) {
-    console.log(produkt);
-    const template = document.querySelector("#templateOne").content;
-    const id = produkt.id;
-    const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
-    const copy = template.cloneNode(true);
-    copy.querySelector(".navn").textContent = produkt.productdisplayname;
-    copy.querySelector("h4").textContent = produkt.subcategory;
-    copy.querySelector(".pris span").textContent = produkt.price;
-    copy.querySelector(".rabat span").textContent = produkt.discount;
-    copy.querySelector(".pris2").textContent = Math.round(produkt.price - (produkt.price * produkt.discount) / 100);
-    copy.querySelector("img").src = imagePath;
-    copy.querySelector("a").href = "product.html?id=" + produkt.id;
- 
-
-  
-
-    document.querySelector("main").appendChild(copy);
+    data.forEach(visDrink);
 }
 
 hentData();
+
+function visdrink(drink) {
+    if (drink.kategori==kat) {
+        console.log("drink");
+        const template = document.querySelector("templateTwo").content;
+        const klon = template.cloneNode(true);
+
+        klon.querySelector("land1").href = "list.html?id" + drink._id + "&kat=" + drink.kategori;
+
+        document.querySelector("templateTwo").appendChild(klon);
+    }
+}

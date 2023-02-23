@@ -46,16 +46,16 @@ console.log("sidenVises");
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-const itemDataFromId = `https://drinks-7edc.restdb.io/rest/cocktails/${id}`;
+const itemDataFromId = `https://drinksdatany-673e.restdb.io/rest/drinks-cocktails${id}`;
 
 console.log("igen");
 let cat = urlParams.get("spiritus_sortering");
 const url = "https://drinks-7edc.restdb.io/rest/cocktails";
-// const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${cat.id}.webp`;
+
 
 const options = {
   headers: {
-    "x-apikey": "63f36afc478852088da684b5",
+    "x-apikey": "63f7c647478852088da685b9",
   },
 };
 
@@ -72,16 +72,16 @@ async function hentData() {
     //     .then(showDrink);
 }
 
-function showDrink(drink) {
-    console.log("funktion drink");
-    document.querySelector(".navn").textContent = drink.navn;
-    document.querySelector(".land").textContent = drink.land;
-    document.querySelector(".smag_1").textContent = drink.smag_1;
-    document.querySelector(".smag_2").textContent = drink.smag_2;
-    document.querySelector(".oc_1").textContent = drink.oc_1;
-    document.querySelector(".oc_2").textContent = drink.oc_2;
-    document.querySelector(".opskrift").textContent = drink.opskrift;
-    document.querySelector(".tag").textContent = drink.tag_line;
+function showProduct(produkt) {
+    console.log("funktion produkt");
+    document.querySelector(".navn").textContent = produkt.navn;
+    document.querySelector(".land").textContent = produkt.land;
+    document.querySelector(".smag_1").textContent = produkt.smag_1;
+    document.querySelector(".smag_2").textContent = produkt.smag_2;
+    document.querySelector(".oc_1").textContent = produkt.oc_1;
+    document.querySelector(".oc_2").textContent = produkt.oc_2;
+    document.querySelector(".opskrift").textContent = produkt.opskrift;
+    document.querySelector(".tag").textContent = produkt.tag_line;
     clone.querySelector(".billede_single").src = "pic/" + cocktail.pictur;
 }
 
