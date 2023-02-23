@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
-    <!-- <link rel="stylesheet" href="css/single2.css"> -->
+    <link rel="stylesheet" href="css/single2.css">
     <link rel="stylesheet" href="css/cocktaillist.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +12,11 @@
 </head>
 
 <body class="cocktaillist_body">
-    <h1 class="logo">Cheers</h1>
-    <a href="index.html">
-        <div class="logodrink">
-            <img src="/drinklogo.png" alt="logo">
-        </div>
-    </a>
+    <div class="logo">Cheers</div>
     <nav class="nav-bar-menu">
+        <a href="index.html">
+            <!-- <div class="logo">Drink It Up</div> -->
+        </a>
         <ul class="nav-elementer">
             <li>
                 <a href="index.html">Kategorier</a>
@@ -36,23 +34,36 @@
     </nav>
     <main class="cocktail_list_main">
 
+
+
+
+
+
         <div class="categorySelector">
             <label for="categorySelector">Sorter efter spiritus</label>
             <select name="categorySelector" id="categorySelector">
-                <option value="Alle">Alle</option>
+                <option value="null">Alle</option>
                 <template id="sortering">
                     <option value="">xx</option>
                 </template>
             </select>
         </div>
 
-        <a href="">
-            <div id="listTemplate">
-            </div>
-        </a>
     </main>
 
 
+    <p>OM OS:
+        “Cheers” er startet af 3 meget forskellige mennesker, der under et projekt på multimediedesigner uddannelsen i
+        2023 kom sammen om én fælles interesse - nemlig drinks.
+        Vi startede dette site for at skabe et samlingspunkt for drinks og cocktails i alle dens former, så man nemmere
+        kan udvælge en alkoholisk forfriskning udfra f.eks. land, stemning eller specifikke indgredienser, så man nemt
+        kan filtrere og finde frem til den perfekte drink.
+
+        Vi her fra “Cheers” ønsker alle en god dag!
+
+        OBS: Vi opfordrer til at håndtere alkohol ansvarligt.
+        Mere info om sundhedsstyrelsens anbefalinger om alkohol kan findes på deres hjemmeside:
+    </p>
     <footer>
         <p>@Cheers 2023</p>
     </footer>

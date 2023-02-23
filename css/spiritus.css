@@ -9,7 +9,20 @@ body {
   background-color: #02132f;
 }
 img {
-  width: 250px;
+  /* width: 250px; */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.category {
+  height: 60%;
+  width: 70%;
+}
+.img-wrapper {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
 }
 
 .kategori_wrapper {
