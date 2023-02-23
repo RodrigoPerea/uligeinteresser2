@@ -4,7 +4,6 @@ let productCategorySelector = document.getElementById("categorySelector");
 const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
 // const url = "cocktails.json";
 const select = document.getElementById("categorySelector");
-
 const main = document.querySelector("main");
 const options = {
   headers: {
@@ -37,13 +36,8 @@ const sortBySpirit = async (event) => {
     vis(json);
   }
 };
-
-// copy.querySelector("a").href = `produkt.html?id=${product.id}`;
-
 {
-  /* <a class="read_more" href=" "> */
 }
-
 select.addEventListener("change", (event) => sortBySpirit(event));
 function vis(json) {
   const template = document.querySelector("#listTemplate");
