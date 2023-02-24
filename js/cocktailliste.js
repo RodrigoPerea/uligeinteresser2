@@ -1,8 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 let cat = urlParams.get("spiritus_sortering");
 let productCategorySelector = document.getElementById("categorySelector");
-const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
-// const url = "cocktails.json";
+// const url = "https://drinks-7edc.restdb.io/rest/cocktails"; //endpoint, gemmer i variablen url
+const url = "cocktails.json";
 const select = document.getElementById("categorySelector");
 
 const main = document.querySelector("main").content;

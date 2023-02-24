@@ -96,6 +96,19 @@ footer p {
   margin-left: 1.5rem;
   margin-top: 50px;
 }
+
+.cocktail_list_main img {
+width: 100%;
+}
+.cocktail_list_main p {
+  grid-column: 1fr 1fr ;
+  color: white;
+  background-color: #133975da;
+  padding: 2%;
+  
+}
+
+
 @media (min-width: 600px) {
   #listTemplate {
     display: grid;

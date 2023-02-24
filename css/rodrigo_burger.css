@@ -1,0 +1,67 @@
+/* burgeren */
+.burger {
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .line {
+    height: 2px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background: rgb(45, 45, 45);
+    transition: transform 0.7s ease, opacity 0.75s ease;
+  }
+  .nav-bar-menu.show .line1 {
+    transform: translate(-10px) rotate(45deg) translate(15px);
+  }
+  .nav-bar-menu.show .line2 {
+    opacity: 0;
+  }
+  .nav-bar-menu.show .line3 {
+    transform: translate(-10px) rotate(-45deg) translate(15px);
+  }
+  .nav-bar-menu.show .nav-elementer {
+    transform: translateX(0%);
+  }
+  .nav-bar-menu.show .line4 {
+    opacity: 0;
+  }
+  @media (max-width: 600px) {
+    .burger {
+      display: block;
+    }
+    li a {
+      font-weight: 600;
+      font-style: normal;
+      line-height: 1.6rem;
+      font-size: 1.3rem;
+      color: white;
+    }
+  
+    .nav-elementer{
+      position: fixed;
+      top: 9rem;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 1s ease;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+      background-color: #291b50e4;
+      cursor: pointer;
+      z-index: 5000;
+      color: white;
+    }
+    
+    .burger-text {
+      color: white;
+    }
+  }
+  @media (max-width: 800px) {
+    .nav-elementer {
+      min-width: 20%;
+    }
+  }

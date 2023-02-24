@@ -46,43 +46,88 @@ console.log("sidenVises");
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-const itemDataFromId = `https://drinksdatany-673e.restdb.io/rest/drinks-cocktails${id}`;
-
-console.log("igen");
-let cat = urlParams.get("spiritus_sortering");
-const url = "https://drinks-7edc.restdb.io/rest/cocktails";
-
+// const itemDataFromId = `https://drinks-7edc.restdb.io/rest/cocktails/${id}`;
+const itemDataFromId = "cocktails.json";
 
 const options = {
   headers: {
-    "x-apikey": "63f7c647478852088da685b9",
+    "x-apikey": "63f36afc478852088da684b5",
   },
 };
 
-console.log("funktion");
-
-
 async function hentData() {
-    const response = await fetch(itemDataFromId);
-    const data = await response.json();
-    console.log("data fra id" + data);
-    showDrink(data);
-    // fetch(url)
-    //     .then((res) => res.json())
-    //     .then(showDrink);
+  // const response = await fetch(url);
+  const response = await fetch(itemDataFromId);
+  const data = await response.json();
+  console.log(data);
+  // data.forEach(visProdukt);
+  console.log("data fra id" + data);
+  visProdukt(data);
 }
 
-function showProduct(produkt) {
-    console.log("funktion produkt");
-    document.querySelector(".navn").textContent = produkt.navn;
-    document.querySelector(".land").textContent = produkt.land;
-    document.querySelector(".smag_1").textContent = produkt.smag_1;
-    document.querySelector(".smag_2").textContent = produkt.smag_2;
-    document.querySelector(".oc_1").textContent = produkt.oc_1;
-    document.querySelector(".oc_2").textContent = produkt.oc_2;
-    document.querySelector(".opskrift").textContent = produkt.opskrift;
-    document.querySelector(".tag").textContent = produkt.tag_line;
-    clone.querySelector(".billede_single").src = "pic/" + cocktail.pictur;
-}
+function visProdukt(produkt) {
+  console.log(produkt);
+  // const template = document.querySelector("#templateOne").content;
+  // const id = produkt.id;
+  const copy = template.cloneNode(true);
+  clone.querySelector(".billede_single").src = "pic/ " + produkt.pictur;
+  copy.querySelector(".singel_wrapper h1").textContent = produkt.navn;
+  copy.querySelector(".land").textContent = produkt.land;
+  document.querySelector(".smag_1").textContent = produkt.smag_1;
+  document.querySelector(".smag_2").textContent = produkt.smag_2;
+  document.querySelector(".oc_1").textContent = produkt.oc_1;
+  document.querySelector(".oc_2").textContent = produkt.oc_2;
+  document.querySelector(".opskrift").textContent = produkt.opskrift;
+  document.querySelector(".tag").textContent = produkt.tag_line;
+  
 
+  document.querySelector("a").href = "single.html?id=" + produkt.id;
+
+  document.querySelector("main").appendChild(copy);
+
+
+}
 hentData();
+
+// const urlParams = new URLSearchParams(window.location.search);
+// const id = urlParams.get("id");
+// const itemDataFromId = `https://drinksdatany-673e.restdb.io/rest/drinks-cocktails${id}`;
+
+// console.log("igen");
+// let cat = urlParams.get("spiritus_sortering");
+// const url = "https://drinks-7edc.restdb.io/rest/cocktails";
+
+
+// const options = {
+//   headers: {
+//     "x-apikey": "63f7c647478852088da685b9",
+//   },
+// };
+
+// console.log("funktion");
+
+
+// async function hentData() {
+//     const response = await fetch(itemDataFromId);
+//     const data = await response.json();
+//     console.log("data fra id" + data);
+//     showDrink(data);
+//     // fetch(url)
+//     //     .then((res) => res.json())
+//     //     .then(showDrink);
+// }
+
+// function showProduct(produkt) {
+//     console.log("funktion produkt");
+//     document.querySelector(".navn").textContent = produkt.navn;
+//     document.querySelector(".land").textContent = produkt.land;
+//     document.querySelector(".smag_1").textContent = produkt.smag_1;
+//     document.querySelector(".smag_2").textContent = produkt.smag_2;
+//     document.querySelector(".oc_1").textContent = produkt.oc_1;
+//     document.querySelector(".oc_2").textContent = produkt.oc_2;
+//     document.querySelector(".opskrift").textContent = produkt.opskrift;
+//     document.querySelector(".tag").textContent = produkt.tag_line;
+//     clone.querySelector(".billede_single").src = "pic/" + cocktail.pictur;
+// }
+
+// hentData();
